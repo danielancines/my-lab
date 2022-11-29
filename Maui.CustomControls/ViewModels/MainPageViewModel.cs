@@ -18,6 +18,8 @@ public partial class MainPageViewModel : ObservableObject, IRecipient<ProductVie
     private void AddProduct()
     {
         this.Products.Add(new ProductViewModel(new Product { Name = this.Name, Description = this.Description, Price = this.Price }));
+        this.Name = string.Empty; 
+        this.Description = string.Empty;
     }
 
     [ObservableProperty]

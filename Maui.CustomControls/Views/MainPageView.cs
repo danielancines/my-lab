@@ -17,6 +17,7 @@ public class MainPageView : ContentPage
             RowDefinitions = Rows.Define(
                         Star,
                         Auto,
+                        Auto,
                         Auto),
 
             Children =
@@ -64,7 +65,13 @@ public class MainPageView : ContentPage
                 {
                     Text = "Add Product"
                 }.Bind(Button.CommandProperty, nameof(viewModel.AddProductCommand))
-                .Row(2)
+                .Row(2),
+
+                new Button
+                {
+                    Text = "Next Page"
+                }.Bind(Button.CommandProperty, nameof(viewModel.AddProductCommand))
+                .Row(3)
             }
         };
 

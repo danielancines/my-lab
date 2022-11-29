@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui.CustomControls.Views.MainPageViewXaml"
+             xmlns:controls="clr-namespace:Maui.CustomControls.Controls.Button"
              Title="MainPageViewXaml">
     <Grid>
         <Grid.RowDefinitions>
@@ -30,6 +31,7 @@
             <Entry Text="{Binding Description}"/>
             <Entry Text="{Binding Price}"/>
         </HorizontalStackLayout>
-        <Button Text="Add Product" Grid.Row="2" Command="{Binding AddProductCommand}"/>
+        <controls:MyButton Grid.Row="2" HeightRequest="40" WidthRequest="70" HorizontalOptions="Start" Margin="10" BackgroundColor="White" Text="fdfddiela"/>
+        <Button Text="Add Product" Grid.Row="2" Command="{Binding AddProductCommand}" FontAttributes="Bold" IsVisible="False"/>
     </Grid>
 </ContentPage>
